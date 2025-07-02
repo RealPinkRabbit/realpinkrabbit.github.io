@@ -1,11 +1,11 @@
 ---
 title: "Jekyll Chirpy 테마로 GitHub Pages 블로그 만들기 - 시행착오 완전 정복"
-date: 2025-01-02 20:00:00 +0900
+date: 2025-07-02 20:00:00 +0900
 categories: [Blog, Jekyll]
 tags: [jekyll, chirpy, github-pages, tutorial]
 description: "Windows 11에서 Jekyll Chirpy 테마로 GitHub Pages 블로그를 만들면서 겪은 모든 시행착오와 해결 방법을 상세히 기록합니다."
 image:
-  path: /assets/img/posts/chirpy-setup-guide.png
+  path: /assets/img/posts/chirpy-setup-guide.jpg
   alt: Jekyll Chirpy Setup Guide
 ---
 
@@ -282,9 +282,9 @@ git push origin main
 
 ## 마치며
 
-Jekyll과 Chirpy 테마는 강력하지만 초기 설정이 복잡합니다. 특히 Windows 환경에서는 예상치 못한 문제들이 많이 발생합니다. 하지만 한 번 설정을 완료하면 아름답고 기능적인 블로그를 운영할 수 있습니다.
+Jekyll과 Chirpy 테마는 강력하지만 초기 설정이 복잡합니다. 특히 Windows 환경에서는 예상치 못한 문제들이 많이 발생합니다.
 
-이 글이 같은 문제를 겪고 있는 분들께 도움이 되길 바랍니다. 질문이 있으시다면 댓글로 남겨주세요!
+이 글이 같은 문제를 겪고 있는 분들께 도움이 되길 바랍니다.
 
 ---
 
