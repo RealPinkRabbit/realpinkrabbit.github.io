@@ -31,7 +31,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          # submodules: true
+          submodules: true
           # If using the 'assets' git submodule from Chirpy Starter, uncomment above
           # (See: https://github.com/cotes2020/chirpy-starter/tree/main/assets)
 
@@ -44,6 +44,18 @@ jobs:
         with:
           ruby-version: 3.3
           bundler-cache: true
+
+      # Node.js 설정 추가
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # Node 의존성 설치 및 빌드
+      - name: Build Assets
+        run: |
+          npm ci
+          npm run build
 
       - name: Build site
         run: bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}"
