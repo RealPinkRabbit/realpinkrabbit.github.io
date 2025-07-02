@@ -35,7 +35,10 @@
   /* Sidebar */
   --site-title-color: rgb(113, 113, 113);
   --site-subtitle-color: #717171;
-  --sidebar-bg: #f6f8fa;
+  --sidebar-bg: linear-gradient(
+    rgba(255, 255, 255, 0.8), 
+    rgba(255, 255, 255, 0.9)
+  ), url('/assets/img/sidebar/sidebar-bg.jpg');
   --sidebar-border-color: #efefef;
   --sidebar-muted-color: #545454;
   --sidebar-active-color: #1d1d1d;
