@@ -4,7 +4,7 @@ date: 2025-07-02 20:09:05 +0900
 categories: [Blog, Introduction]
 tags: [시작, jekyll, chirpy]
 image:
-  path: /assets/img/posts/welcome.jpg
+  path: /assets/img/posts/welcome.png
   alt: Welcome image
 ---
 
