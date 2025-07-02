@@ -35,30 +35,7 @@ Jekyll Chirpy 테마로 GitHub Pages 블로그를 만들면서 예상치 못한 
 2. Fork 버튼 클릭
 3. Repository name을 `username.github.io` 형식으로 변경
 
-## 2단계: GitHub 잔디 문제 해결
-
-Fork한 저장소는 기본적으로 GitHub contribution(잔디)이 기록되지 않습니다. 이를 해결하기 위해:
-
-```powershell
-# Fork한 저장소 클론
-git clone https://github.com/YourUsername/yourusername.github.io.git
-cd yourusername.github.io
-
-# 기존 git 히스토리 삭제
-Remove-Item -Recurse -Force .git
-
-# 새로운 git 저장소로 초기화
-git init
-git add .
-git commit -m "Initial commit: Setup Jekyll blog with full Chirpy theme"
-
-# GitHub 저장소 연결
-git remote add origin https://github.com/YourUsername/yourusername.github.io.git
-git branch -M main
-git push -u origin main --force
-```
-
-## 3단계: 시행착오 #1 - Ruby 버전 충돌
+## 2단계: 시행착오 #1 - Ruby 버전 충돌
 
 ### 문제
 ```
@@ -77,7 +54,7 @@ gem install bundler
 bundle install
 ```
 
-## 4단계: 시행착오 #2 - Husky Commit 규칙
+## 3단계: 시행착오 #2 - Husky Commit 규칙
 
 ### 문제
 ```
@@ -101,7 +78,7 @@ Remove-Item commitlint.config.js -Force -ErrorAction SilentlyContinue
 git commit -m "원하는 커밋 메시지"
 ```
 
-## 5단계: GitHub Actions 설정
+## 4단계: GitHub Actions 설정
 
 Chirpy의 기본 워크플로우는 개발용입니다. GitHub Pages 배포용 워크플로우가 필요합니다:
 
@@ -115,7 +92,7 @@ Remove-Item .github\workflows\cd.yml -Force
 # ... 기타 개발용 파일들
 ```
 
-## 6단계: 시행착오 #3 - SCSS 빌드 오류
+## 5단계: 시행착오 #3 - SCSS 빌드 오류
 
 ### 문제
 ```
@@ -138,7 +115,7 @@ New-Item -ItemType Directory -Force -Path _sass\vendors
 Copy-Item -Path node_modules\bootstrap\scss -Destination _sass\vendors\bootstrap -Recurse -Force
 ```
 
-## 7단계: 시행착오 #4 - npm ci 오류
+## 6단계: 시행착오 #4 - npm ci 오류
 
 ### 문제
 GitHub Actions에서:
@@ -157,7 +134,7 @@ git commit -m "fix: add package-lock.json for npm ci"
 git push origin main
 ```
 
-## 8단계: 시행착오 #5 - 환경 보호 규칙
+## 7단계: 시행착오 #5 - 환경 보호 규칙
 
 ### 문제
 ```
@@ -171,7 +148,7 @@ Branch "main" is not allowed to deploy to github-pages due to environment protec
    - Required reviewers: 체크 해제
    - Deployment branches: `All branches` 선택
 
-## 9단계: 최종 GitHub Actions 워크플로우
+## 8단계: 최종 GitHub Actions 워크플로우
 
 모든 문제를 해결한 완전한 워크플로우:
 
@@ -254,7 +231,6 @@ jobs:
 ### 핵심 체크리스트
 
 - [ ] 전체 Chirpy 테마 fork (starter 아님)
-- [ ] Git 히스토리 초기화 (잔디 기록용)
 - [ ] Husky 제거 (자유로운 커밋)
 - [ ] GitHub Pages 워크플로우 설정
 - [ ] Node.js 의존성 및 vendor 파일 추가
