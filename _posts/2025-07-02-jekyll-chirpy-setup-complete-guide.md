@@ -5,7 +5,7 @@ categories: [Blog, Jekyll]
 tags: [jekyll, chirpy, github-pages, tutorial]
 description: "Windows 11에서 Jekyll Chirpy 테마로 GitHub Pages 블로그를 만들면서 겪은 모든 시행착오와 해결 방법을 상세히 기록합니다."
 image:
-  path: /assets/img/posts/chirpy-setup-guide.jpg
+  path: /assets/img/posts/chirpy-setup-guide.png
   alt: Jekyll Chirpy Setup Guide
 ---
 
